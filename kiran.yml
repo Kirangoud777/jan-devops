@@ -1,0 +1,8 @@
+- hosts: server2.abc.com
+  remote_user: yes
+  become: yes
+  tasks: 
+      - name: Install httpd package
+        yum: name=httpd state=installed
+        tags: 
+            - install 
